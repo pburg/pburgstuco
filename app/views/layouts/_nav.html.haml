@@ -1,0 +1,20 @@
+.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container
+      -# This is the navigation toggle button- it only shows when the nav bar
+      -# is in collapse mode.
+      %a.btn.btn-navbar{"data-toggle" => "collapse",
+                        "data-target" => ".nav-collapse"}
+        - 3.times do
+          %span.icon-bar
+
+      = link_to "PHS Student Council", root_path, class: "brand"
+
+      .nav-collapse.collapse
+        %ul.nav.pull-right
+          = nav_link "Home", root_path
+          = nav_link "Members", members_path
+          = nav_link "Events", events_path
+          = nav_link "Photos", photos_path
+          = nav_link "Downloads", downloads_path
+          = nav_link "Constitution", constitution_path

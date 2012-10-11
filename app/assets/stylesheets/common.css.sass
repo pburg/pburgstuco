@@ -1,0 +1,65 @@
+@import "bootstrap"
+
+/** Variables/Mixins **/
+
+$grayMediumLight: #EAEAEA
+
+body
+  // Make room for the navigation bar:
+  padding-top: 60px
+
+/** Navigation Bar **/
+
+// Gets rid of the out-of-place white triangle that showed up on mobile devices
+// on the navigation bar dropdown.
+@media (max-width: 979px)
+  .nav-collapse .dropdown-menu:before,
+  .nav-collapse .dropdown-menu:after
+    display: none !important
+
+$brandShadow: rgba(255, 255, 255, 0.125)
+$brandHoverShadow: rgba(255, 255, 255, 0.4)
+
+$brandTransitionAll: 0.2s
+$brandTransitionLinear: 0s
+
+.navbar .brand
+  -moz-transition: all $brandTransitionAll linear $brandTransitionLinear
+  -webkit-transition: all $brandTransitionAll linear $brandTransitionLinear
+  -o-transition: all $brandTransitionAll linear $brandTransitionLinear
+
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px $brandShadow
+
+  &:hover
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px $brandHoverShadow
+
+/** Typography **/
+
+h1
+  font-size: 3em
+  line-height: 1
+  letter-spacing: -2px
+  margin-bottom: 30px
+  text-align: center
+
+p
+  font-size: 1.1em
+  line-height: 1.7em
+
+/** Footer **/
+
+.footer
+  margin-top: 20px
+  padding-top: 5px
+  border-top: 1px solid $grayMediumLight
+  color: $grayLight
+  font-size: 85%
+  a
+    color: $gray
+    &:hover
+      color: $grayDarker
+  text-align: center
+  .left
+    float: left
+  .right
+    float: right
