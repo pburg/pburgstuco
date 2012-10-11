@@ -1,4 +1,4 @@
-# Phillipsburg High School Student Council Website
+# Phillipsburg High School Student Council Website [![Dependency Status](https://gemnasium.com/pburg/pburgstuco.png)](https://gemnasium.com/pburg/pburgstuco) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/pburg/pburgstuco)
 
  * Visit: http://www.pburgstuco.com/
 
