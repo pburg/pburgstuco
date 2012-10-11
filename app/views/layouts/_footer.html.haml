@@ -1,0 +1,29 @@
+- content_for :github_link do
+  Source code available on
+  = succeed "." do
+    %a{href: "https://github.com/pburg/pburgstuco"} GitHub
+
+- content_for :copyright do
+  Copyright ©2012 Vinny Diehl
+
+- content_for :contact_link do
+  = link_to "Contact Us", contact_path
+
+.footer
+
+  -# On most screens the footer text will distribute evenly across the bottom.
+  -# On phones, it will appear stacked at the bottom.
+
+  .hidden-phone
+    .left
+      = yield :github_link
+    = yield :copyright
+    .right
+      = yield :contact_link
+
+  .visible-phone
+    = yield :github_link
+    %br/
+    = yield :copyright
+    %br/
+    = yield :contact_link
