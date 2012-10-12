@@ -1,4 +1,47 @@
 - provide :title, "Contact Us"
 
-%h1 Pages#contact
-%p Find me in app/views/pages/contact.html.haml
+-# Hack to get the CSS "Fork me on GitHub" to work on IE
+/[if IE]
+  = stylesheet_link_tag "/ie/fork_me_on_github_ie.css", media: "all"
+
+.github-fork-ribbon-wrapper.right
+  .github-fork-ribbon
+    %a{href: "https://github.com/pburg/pburgstuco"} Fork me on GitHub
+
+%h1 Contact Us
+
+%p If you would like to reach school/council administration:
+
+%address
+  %strong Phillipsburg High School
+  %br/
+  200 Hillcrest Boulevard
+  %br/
+  Phillipsburg, NJ 08865
+  %br/
+  Phone: (908) 454-6551
+
+%address
+  %strong Student Council
+  %br/
+  Phone: (908) 213-2446
+
+%p
+  If you have any problems, comments, or suggestions for this website, contact
+  the developer:
+
+%address
+  %strong Vinny Diehl
+  %br/
+  = succeed ":" do
+    %abbr{title: "AOL Instant Messenger"} AIM
+  vinnyd4
+  %br/
+  Email:
+  %a{href: "mailto:gbchaosmaster926@gmail.com"} gbchaosmaster926@gmail.com
+
+%p
+  If you would like to contribute to this website or are simply curious about
+  its development or recent changes,
+  = succeed "." do
+    %a{href: "https://github.com/pburg/pburgstuco"} check us out on GitHub
