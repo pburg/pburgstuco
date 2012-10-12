@@ -32,3 +32,14 @@ Constitution.
  * Added content for the Members page
  * Added ID's to header elements
  * Made the navigation bar's position absolute
+
+## 0.4
+
+While not yet complete, this prerelease is a large step forward.
+
+### Additions
+
+ * Contact page added
+ * Events page prepared
+ * Home page now has a bit of content
+ * Placeholder content on Downloads and Photos pages
