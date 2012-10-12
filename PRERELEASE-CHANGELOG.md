@@ -1,8 +1,13 @@
-# Change Log
+# Pre-Release Change Log
 
 A summary of the changes to the web app will be added to this file with each
 production release. For a more detailed history of changes, see the commit
 history.
+
+Once the app is complete, the version will be bumped to 1.0 and this change log
+will be replaced with one that will track the progress for the rest of the
+app's lifetime. This file will still be available in the commit history, of
+course.
 
 ## 0.1
 
@@ -19,3 +24,11 @@ Constitution.
  * Added content for the Constitution
  * Added unique page titles
  * Tweaked some margins
+
+## 0.3
+
+### Additions
+
+ * Added content for the Members page
+ * Added ID's to header elements
+ * Made the navigation bar's position absolute
