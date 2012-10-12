@@ -8,3 +8,14 @@ history.
 
 This is the initial deployment, just to get the application up on the server.
 It is nothing but a shell of what the website one day will be.
+
+## 0.2
+
+Another prerelease, bringing a few changes and some content for the
+Constitution.
+
+### Additions
+
+ * Added content for the Constitution
+ * Added unique page titles
+ * Tweaked some margins
