@@ -1,4 +1,19 @@
 - provide :title, "Downloads"
 
 %h1 Downloads
-%p This page will hold some links to hosted files available for download.
+
+%p These are the files that are currently available for download:
+
+-# Path to the downloads directory:
+- dl_path = "/downloads"
+
+%ul
+  %li
+    = link_to "Field Trip Permission Slip",
+              "#{dl_path}/field_trip_permission_slip.pdf"
+  %li
+    = link_to "National Youth Service Day Citizen Request",
+              "#{dl_path}/national_youth_service_day_citizen_request.pdf"
+  %li
+    = link_to "Powder Puff Football Rules and Regulations",
+              "#{dl_path}/powder_puff_football_rules_and_regulations.pdf"
