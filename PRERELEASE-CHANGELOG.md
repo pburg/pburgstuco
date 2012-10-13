@@ -43,3 +43,10 @@ While not yet complete, this prerelease is a large step forward.
  * Events page prepared
  * Home page now has a bit of content
  * Placeholder content on Downloads and Photos pages
+
+## 0.5
+
+### Additions
+
+ * Added some PDFs for download
+ * Put the links up on the Downloads page, could use more design in the future
