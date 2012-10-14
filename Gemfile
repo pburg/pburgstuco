@@ -14,12 +14,14 @@ gem "jquery-rails", "~> 2.1"
 ### Assets
 
 group :assets do
-  gem "sass-rails",   "~> 3.2"
+  # JavaScript
   gem "coffee-rails", "~> 3.2"
-
-  gem "bootstrap-sass", "~> 2.1"
-
   gem "uglifier", "~> 1.3"
+
+  # CSS
+  gem "sass-rails",   "~> 3.2"
+  gem "compass-rails", "~> 1.0"
+  gem "bootstrap-sass", "~> 2.1"
 end
 
 ### Environment Specific
