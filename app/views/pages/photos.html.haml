@@ -2,9 +2,6 @@
 
 %h1 Photo Gallery
 
-/ This is a test. At production these will all be dynamically generated from
-/ the directories within app/assets/images/photos
-%h2 Turkey Day Game
-= lightbox_group "Turkey Day Game", Rails.root.join("app", "assets",
-                                                    "images", "photos",
-                                                    "turkey_day_game")
+- @galleries.each do |gallery_path|
+  %h2= gallery_title = File.basename(gallery_path).titlecase
+  = lightbox_group gallery_title, gallery_path

@@ -9,6 +9,8 @@ class PagesController < ApplicationController
   end
 
   def photos
+    @galleries = Dir[Rails.root.join "app", "assets", "images", "photos", "*"].
+                 select { |child| File.directory? child }.sort
   end
 
   def downloads
