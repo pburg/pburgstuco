@@ -8,6 +8,9 @@ require "rspec/autorun"
 # All Ruby files in spec/support/ get included.
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
+# List of all of the actions of the Pages controller:
+PAGES_ACTIONS = %w[home members events photos downloads constitution contact]
+
 RSpec.configure do |config|
   # Use ActiveRecord fixtures.
   # config.fixture_path = "#{::Rails.root}/spec/fixtures"

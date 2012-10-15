@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe PagesController do
-  %w[home members events photos downloads constitution contact].each do |c|
+  PAGES_ACTIONS.each do |c|
     describe "GET '#{c}'" do
       it "returns http success" do
         get c
