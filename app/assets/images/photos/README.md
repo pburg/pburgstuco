@@ -2,7 +2,9 @@
 
 All of the albums to be shown on the Photos page of the website go into here.
 When you add an album, it will be parsed right onto the page with no need to
-touch any code.
+touch any code. Follow the guidelines below when it comes to making changes to
+the gallery, and if you get stuck, look at the existing albums to see how they
+are structured.
 
 ## Guidelines
 
