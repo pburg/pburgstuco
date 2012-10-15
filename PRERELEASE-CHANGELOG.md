@@ -50,3 +50,22 @@ While not yet complete, this prerelease is a large step forward.
 
  * Added some PDFs for download
  * Put the links up on the Downloads page, could use more design in the future
+
+## 0.6
+
+A lot of content added for this one. Only one page, but it's a lot of content.
+Unfortunately all of the photos bump the slug size to 30.7 MB, but it had to be
+done eventually.
+
+### Additions
+
+ * Added Photo Gallery
+
+### Bug Fixes
+
+ * Fixed buggy positioning of "Fork me on GitHub" ribbon on IE
+
+### To Do
+
+ * Make "Fork me on GitHub" ribbon easily clickable in IE like it is in every
+   sane browser
