@@ -1,0 +1,171 @@
+@import "compass/css3"
+@import "compass/utilities/general/clearfix"
+
+/** Variables **/
+
+$thumbHoverColor: #08C
+$gutter: 20px
+$radius: 4px
+
+/** Styles **/
+
+#lightboxOverlay
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 9999
+  background-color: #000
+  +opacity(0.85)
+  display: none
+
+#lightbox
+  position: absolute
+  left: 0
+  width: 100%
+  z-index: 10000
+  text-align: center
+  line-height: 0
+  font-family: 'lucida grande', tahoma, verdana, arial, sans-serif
+  font-weight: normal
+  img
+    width: auto
+    height: auto
+  a img
+    border: none
+
+.lb-outerContainer
+  position: relative
+  background-color: #fff
+  +pie-clearfix
+  width: 250px
+  height: 250px
+  margin: 0 auto
+  +border-radius($radius)
+
+.lb-container
+  padding: 10px
+
+.lb-loader
+  position: absolute
+  top: 40%
+  left: 0%
+  height: 25%
+  width: 100%
+  text-align: center
+  line-height: 0
+
+.lb-nav
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  z-index: 10
+
+.lb-container > .nav
+  left: 0
+
+.lb-nav a
+  outline: none
+
+.lb-prev, .lb-next
+  width: 49%
+  height: 100%
+  background-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7")
+  /* Trick IE into showing hover
+  display: block
+
+.lb-prev
+  left: 0
+  float: left
+
+.lb-next
+  right: 0
+  float: right
+
+.lb-prev
+  &:hover
+    background: url(/assets/lightbox/prev.png) left 48% no-repeat
+
+.lb-next
+  &:hover
+    background: url(/assets/lightbox/next.png) right 48% no-repeat
+
+.lb-dataContainer
+  margin: 0 auto
+  padding-top: 5px
+  +pie-clearfix
+  width: 100%
+  +border-bottom-radius($radius)
+
+.lb-data
+  padding: 0 10px
+  color: #bbb
+  .lb-details
+    width: 85%
+    float: left
+    text-align: left
+    line-height: 1.1em
+  .lb-caption
+    font-size: 13px
+    font-weight: bold
+    line-height: 1em
+  .lb-number
+    display: block
+    clear: left
+    padding-bottom: 1.0em
+    font-size: 11px
+  .lb-close
+    width: 35px
+    float: right
+    padding-bottom: 0.7em
+    outline: none
+    &:hover
+      cursor: pointer
+
+/** Page Styles **/
+
+.image-row
+  +pie-clearfix
+  margin: $gutter/2 0
+  .single
+    float: left
+    a
+      float: left
+      display: block
+      background: rgba(255, 255, 255, .1)
+      padding: 7px
+      line-height: 1em
+      +border-radius($radius)
+      +box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.5))
+      margin-right: $gutter
+      +transition(all .2s ease-out)
+      img
+        +border-radius($radius)
+        border: 1px solid rgba(0, 0, 0, 0.3)
+      &:hover
+        background-color: $thumbHoverColor
+  .set
+    float: left
+    margin-bottom: 5px
+    background: rgba(255, 255, 255, .1)
+    +border-radius($radius)
+    +box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.5))
+    +transition(all .2s ease-out)
+    &:hover
+      background: rgba(255, 255, 255, .2)
+    .single
+      a
+        background: none
+        +border-radius(0)
+        +box-shadow(none)
+        margin-right: 0
+        &:hover
+          background-color: $thumbHoverColor
+          +box-shadow(0 -1px 0 0 rgba(255, 255, 255, 0.2), 0 1px 4px 0 rgba(0, 0, 0, 0.5))
+    .single.first
+      a
+        +border-left-radius($radius)
+    .single.last
+      a
+        +border-right-radius($radius)

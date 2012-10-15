@@ -1,4 +1,7 @@
 - provide :title, "Photo Gallery"
 
 %h1 Photo Gallery
-%p A photo gallery shall make an appearance here soon.
+
+- @albums.each do |path|
+  %h2= album_title = File.basename(path).titlecase
+  = lightbox_group album_title, path
