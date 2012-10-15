@@ -1,7 +1,6 @@
 - content_for :github_link do
-  Source code available on
-  = succeed "." do
-    %a{href: "https://github.com/pburg/pburgstuco"} GitHub
+  Version
+  = link_to @version, @changelog_link
 
 - content_for :copyright do
   Copyright ©2012 Vinny Diehl
