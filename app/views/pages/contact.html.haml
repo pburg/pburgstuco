@@ -10,6 +10,21 @@
 
 %h1 Contact Us
 
+-# Anti-IE PSA
+/[if IE]
+  .alert
+    %button.close{type: "button", "data-dismiss" => "alert"} x
+    %strong Hey!
+    I see that you're using Internet Explorer. Might you take a moment to try a
+    more friendly browser such as
+    %a{href: "http://www.mozilla.org/en-US/firefox/new/"} Firefox
+    or
+    = succeed "?" do
+      %a{href: "https://www.google.com/intl/en/chrome/browser/"} Chrome
+    They're fast, free, extensible, and stay up to date with the latest web
+    technology. The more people that switch, the more developers will be able
+    to bring you the latest content.
+
 %p If you would like to reach school/council administration:
 
 %address
