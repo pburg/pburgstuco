@@ -2,6 +2,6 @@
 
 %h1 Photo Gallery
 
-- @galleries.each do |gallery_path|
-  %h2= gallery_title = File.basename(gallery_path).titlecase
-  = lightbox_group gallery_title, gallery_path
+- @albums.each do |path|
+  %h2= album_title = File.basename(path).titlecase
+  = lightbox_group album_title, path
