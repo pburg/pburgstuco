@@ -69,3 +69,18 @@ done eventually.
 
  * Make "Fork me on GitHub" ribbon easily clickable in IE like it is in every
    sane browser
+
+## 0.7
+
+Mostly subtle changes here.
+
+### Additions
+
+ * Added some upcoming events to the Events page
+ * Added a PSA for IE users to switch browsers
+
+### Changes
+
+ * Changed the GitHub link on the left side of the footer to the version
+   number and a link to that version's entry in the change log
+ * Made Officers table on the Members page striped without hover
