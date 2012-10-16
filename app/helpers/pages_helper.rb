@@ -1,4 +1,28 @@
 module PagesHelper
+  # Gives the file size of a file that is +size+ bytes as a string including
+  # the unit. It will choose the unit to use based on how big the file is.
+  # Decimals will be rounded to the tenths.
+  #
+  #   120         # => "120 Bytes"
+  #   1234        # => "1.2 KB"
+  #   1234567     # => "1.2 MB"
+  #   1234567890  # => "1.1 GB"
+  def sane_file_size(size)
+    return "1 Byte" if size == 1
+
+    divisor, unit = if size < Numeric::KILOBYTE
+                      [1, "Bytes"]
+                    elsif size < Numeric::MEGABYTE
+                      [Numeric::KILOBYTE, "KB"]
+                    elsif size < Numeric::GIGABYTE
+                      [Numeric::MEGABYTE, "MB"]
+                    else
+                      [Numeric::GIGABYTE, "GB"]
+                    end
+
+    "%g #{unit}" % (size.to_f / divisor).round(1)
+  end
+
   # Takes the photo gallery at +dir+, with the name +name+, and creates a
   # Lightbox 2 group from them. Within +dir+ there may be a directory named
   # <tt>thumbs</tt> containing the respective thumbnails for each image.
