@@ -1,6 +1,8 @@
 - content_for :github_link do
   Version
   = link_to @version, @changelog_link
+  - if ENV["SERVER"] == "development"
+    \- Development Server
 
 - content_for :copyright do
   -# Show links to launch the current page on one of the servers when running
@@ -11,6 +13,9 @@
               "http://pburgstuco-dev.herokuapp.com#{request.fullpath}"
     |
     = link_to "Production",
+              "http://pburgstuco.herokuapp.com#{request.fullpath}"
+  - elsif ENV["SERVER"] == "development"
+    = link_to "Launch Production",
               "http://pburgstuco.herokuapp.com#{request.fullpath}"
   - else
     Copyright ©2012 Vinny Diehl
