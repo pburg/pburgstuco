@@ -84,3 +84,21 @@ Mostly subtle changes here.
  * Changed the GitHub link on the left side of the footer to the version
    number and a link to that version's entry in the change log
  * Made Officers table on the Members page striped without hover
+
+## 0.8
+
+Cleaned up some dependencies and added some nifty stuff for development. Also
+a few user-facing fixes specified below.
+
+### Security
+
+ * Secured secret token
+
+### Improvements
+
+ * Better Downloads page - loads files dynamically and displays them in a table
+   along with file type and size
+
+### Fixes
+
+ * Minor spelling/sematics fixes

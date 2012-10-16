@@ -3,7 +3,17 @@
   = link_to @version, @changelog_link
 
 - content_for :copyright do
-  Copyright ©2012 Vinny Diehl
+  -# Show links to launch the current page on one of the servers when running
+  -# in development mode. Show the normal copyright otherwise.
+  - if Rails.env.development?
+    Launch:
+    = link_to "Development",
+              "http://pburgstuco-dev.herokuapp.com#{request.fullpath}"
+    |
+    = link_to "Production",
+              "http://pburgstuco.herokuapp.com#{request.fullpath}"
+  - else
+    Copyright ©2012 Vinny Diehl
 
 - content_for :contact_link do
   = link_to "Contact Us", contact_path

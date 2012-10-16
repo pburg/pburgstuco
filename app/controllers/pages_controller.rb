@@ -14,6 +14,7 @@ class PagesController < ApplicationController
   end
 
   def downloads
+    @files = Dir[Rails.root.join "public", "downloads", "*"].sort
   end
 
   def constitution

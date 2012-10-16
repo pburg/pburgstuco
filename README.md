@@ -1,6 +1,6 @@
 # Phillipsburg High School Student Council Website
 
- * Code Status: [![Build Status](https://secure.travis-ci.org/pburg/pburgstuco.png)](http://travis-ci.org/pburg/pburgstuco) [![Dependency Status](https://gemnasium.com/pburg/pburgstuco.png)](https://gemnasium.com/pburg/pburgstuco) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/pburg/pburgstuco)
+ * Code Status: [![Build Status](https://secure.travis-ci.org/pburg/pburgstuco.png)](http://travis-ci.org/pburg/pburgstuco) [![Dependency Status](https://gemnasium.com/pburg/pburgstuco.png)](https://gemnasium.com/pburg/pburgstuco) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/pburg/pburgstuco) [![Maintenance Status](http://stillmaintained.com/pburg/pburgstuco.png)](http://stillmaintained.com/pburg/pburgstuco)
  * Visit: http://pburgstuco.herokuapp.com/
 
 This is the new Phillipsburg High School Student Council website.
