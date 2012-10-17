@@ -1,3 +1,4 @@
-This README file will to introduce the application and point to useful places
-in the API for learning more. Run "rake doc:app" to generate API documentation
-for the models, controllers, helpers, and libraries.
+Welcome to the documentation for the PHS Student Council website. Run
+`rake doc:app` to generate the latest docs for the application.
+
+All of the helper methods for the application are documented.
