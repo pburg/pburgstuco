@@ -8,17 +8,19 @@ module PagesHelper
   #   1234567     # => "1.2 MB"
   #   1234567890  # => "1.1 GB"
   def sane_file_size(size)
+    return "Empty" if size.blank? || size.zero?
     return "1 Byte" if size == 1
 
-    divisor, unit = if size < Numeric::KILOBYTE
-                      [1, "Bytes"]
-                    elsif size < Numeric::MEGABYTE
-                      [Numeric::KILOBYTE, "KB"]
-                    elsif size < Numeric::GIGABYTE
-                      [Numeric::MEGABYTE, "MB"]
-                    else
-                      [Numeric::GIGABYTE, "GB"]
-                    end
+    divisor, unit =
+      if size < Numeric::KILOBYTE
+        [1, "Bytes"]
+      elsif size < Numeric::MEGABYTE
+        [Numeric::KILOBYTE, "KB"]
+      elsif size < Numeric::GIGABYTE
+        [Numeric::MEGABYTE, "MB"]
+      else
+        [Numeric::GIGABYTE, "GB"]
+      end
 
     "%g #{unit}" % (size.to_f / divisor).round(1)
   end
@@ -32,8 +34,8 @@ module PagesHelper
 
     singles = images.each_with_index.map do |f, i|
       filename = File.join("/", "assets", f.split(File::SEPARATOR)[-3..-1])
-      thumbname = File.exists?(thumbs_dir f) \
-                  ? File.join(thumbs_dir filename)
+      thumbname = File.exists?(thumbs_path f) \
+                  ? thumbs_path(filename)
                   : filename
 
       title = "#{i + 1} of #{images.size}"
@@ -48,11 +50,7 @@ module PagesHelper
       end
     end
 
-    content_tag(:div, :class => "image-row") do
-      content_tag(:div, :class => "set") do
-        singles.collect { |s| concat s }
-      end
-    end
+    lightbox_set singles
   end
 
 private
@@ -64,12 +62,21 @@ private
     File.basename image, "*.{jpg,JPG,png,PNG,gif,GIF}"
   end
 
+  # Collects +singles+, an array of Lightbox 2 singles, into an image row/set.
+  def lightbox_set(singles)
+    content_tag(:div, :class => "image-row") do
+      content_tag(:div, :class => "set") do
+        singles.map { |s| concat s }
+      end
+    end
+  end
+
   # Takes the image at +path+ and returns the path to the thumbnail for that
   # image, assuming that the thumbnail has the same filename and resides in
   # a child directory named <tt>thumbs</tt>.
   #
-  #   thumbs_dir "/path/to/image.jpg"  # => "/path/to/thumbs/image.jpg"
-  def thumbs_dir(path)
+  #   thumbs_path "/path/to/image.jpg"  # => "/path/to/thumbs/image.jpg"
+  def thumbs_path(path)
     File.join File.dirname(path), "thumbs", File.basename(path)
   end
 end

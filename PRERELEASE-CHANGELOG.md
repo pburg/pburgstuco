@@ -102,3 +102,17 @@ a few user-facing fixes specified below.
 ### Fixes
 
  * Minor spelling/sematics fixes
+
+## 0.9
+
+One of the more subtle updates.
+
+### Additions
+
+ * Boilerplate comment at the top of the page source
+ * An easter egg...
+
+### Improvements
+
+ * Internal refactoring
+ * Better "x" button for anti-IE PSA
