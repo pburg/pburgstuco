@@ -34,8 +34,8 @@ module PagesHelper
 
     singles = images.each_with_index.map do |f, i|
       filename = File.join("/", "assets", f.split(File::SEPARATOR)[-3..-1])
-      thumbname = File.exists?(thumbs_dir f) \
-                  ? File.join(thumbs_dir filename)
+      thumbname = File.exists?(thumbs_path f) \
+                  ? thumbs_path(filename)
                   : filename
 
       title = "#{i + 1} of #{images.size}"
@@ -50,11 +50,7 @@ module PagesHelper
       end
     end
 
-    content_tag(:div, :class => "image-row") do
-      content_tag(:div, :class => "set") do
-        singles.collect { |s| concat s }
-      end
-    end
+    lightbox_set singles
   end
 
 private
@@ -66,12 +62,21 @@ private
     File.basename image, "*.{jpg,JPG,png,PNG,gif,GIF}"
   end
 
+  # Collects +singles+, an array of Lightbox 2 singles, into an image row/set.
+  def lightbox_set(singles)
+    content_tag(:div, :class => "image-row") do
+      content_tag(:div, :class => "set") do
+        singles.map { |s| concat s }
+      end
+    end
+  end
+
   # Takes the image at +path+ and returns the path to the thumbnail for that
   # image, assuming that the thumbnail has the same filename and resides in
   # a child directory named <tt>thumbs</tt>.
   #
-  #   thumbs_dir "/path/to/image.jpg"  # => "/path/to/thumbs/image.jpg"
-  def thumbs_dir(path)
+  #   thumbs_path "/path/to/image.jpg"  # => "/path/to/thumbs/image.jpg"
+  def thumbs_path(path)
     File.join File.dirname(path), "thumbs", File.basename(path)
   end
 end
