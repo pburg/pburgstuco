@@ -1,6 +1,6 @@
 - content_for :github_link do
   Version
-  = link_to @version, @changelog_link
+  = link_to @version, @changelog_link, id: "version"
   - if ENV["SERVER"] == "development"
     \- Development Server
 

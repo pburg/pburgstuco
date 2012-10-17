@@ -27,6 +27,6 @@ end
 
 group :development, :test do
   gem "rspec-rails", "~> 2.11"
-  gem "capybara", "~> 1.1"
+  gem "capybara", "2.0.0beta2"
   gem "fuubar", "~> 1.1"
 end

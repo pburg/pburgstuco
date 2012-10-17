@@ -11,7 +11,9 @@ describe "Footer" do
   it { should have_link version }
 
   it "links to the change log on GitHub" do
-    uri = URI.parse find_link(version)[:href]
+    # Prevent an ambiguous match by only checking the one inside of the
+    # div.hidden-phone.
+    uri = URI.parse find(".hidden-phone #version")[:href]
 
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
