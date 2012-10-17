@@ -30,6 +30,11 @@ describe PagesHelper do
       sane_file_size(1.byte).should == "1 Byte"
     end
 
+    it "returns 'Empty' for an empty file or a blank parameter" do
+      sane_file_size(0).should == "Empty"
+      sane_file_size(nil).should == "Empty"
+    end
+
     it "displays whole numbers without a decimal" do
       sane_file_size(1.megabyte).should == "1 MB"
       sane_file_size(24.gigabytes).should == "24 GB"

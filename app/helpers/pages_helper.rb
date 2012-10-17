@@ -8,17 +8,19 @@ module PagesHelper
   #   1234567     # => "1.2 MB"
   #   1234567890  # => "1.1 GB"
   def sane_file_size(size)
+    return "Empty" if size.blank? || size.zero?
     return "1 Byte" if size == 1
 
-    divisor, unit = if size < Numeric::KILOBYTE
-                      [1, "Bytes"]
-                    elsif size < Numeric::MEGABYTE
-                      [Numeric::KILOBYTE, "KB"]
-                    elsif size < Numeric::GIGABYTE
-                      [Numeric::MEGABYTE, "MB"]
-                    else
-                      [Numeric::GIGABYTE, "GB"]
-                    end
+    divisor, unit =
+      if size < Numeric::KILOBYTE
+        [1, "Bytes"]
+      elsif size < Numeric::MEGABYTE
+        [Numeric::KILOBYTE, "KB"]
+      elsif size < Numeric::GIGABYTE
+        [Numeric::MEGABYTE, "MB"]
+      else
+        [Numeric::GIGABYTE, "GB"]
+      end
 
     "%g #{unit}" % (size.to_f / divisor).round(1)
   end
