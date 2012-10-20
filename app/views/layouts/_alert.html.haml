@@ -1,0 +1,5 @@
+- if ENV["ALERT"]
+  #instant.alert.alert-block{class: "alert-#{ENV["ALERT_TYPE"] || "info"}"}
+    %button.close{"data-dismiss" => "alert"} &times;
+    %h4= ENV["ALERT_TITLE"] || "Notice"
+    %p= ENV["ALERT"]
