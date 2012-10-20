@@ -1,6 +1,6 @@
 - content_for :github_link do
   Version
-  = link_to @version, @changelog_link, id: "version"
+  = link_to @version, @changelog_link, :class => "version"
   - if development_server?
     \- Development Server
 

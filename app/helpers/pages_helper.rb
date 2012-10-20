@@ -43,7 +43,7 @@ module PagesHelper
 
       content_tag(:div, :class => cls) do
         content_tag(:a,
-                    rel: "lightbox[#{name.downcase.gsub(" ", "-")}]",
+                    :class => "lightbox[#{name.downcase.gsub(" ", "-")}]",
                     href: filename) do
           image_tag thumbname, alt: title, size: "100x100"
         end
