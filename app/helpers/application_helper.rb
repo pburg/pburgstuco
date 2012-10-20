@@ -1,4 +1,16 @@
 module ApplicationHelper
+  # Returns whether or not the application is running on the public development
+  # server. Relies on the SERVER environment variable.
+  def development_server?
+    Rails.env.production? && ENV["SERVER"] == "development"
+  end
+
+  # Returns whether or not the application is running on the production server.
+  # Relies on the SERVER environment variable.
+  def production_server?
+    Rails.env.production? && ENV["SERVER"] == "production"
+  end
+
   # Generates a generic page title. Prepend +title+ with "PHS Student Council"
   # and a pipe for separation. If +title+ is blank, simply return
   # "PHS Student Council Website".

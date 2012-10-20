@@ -1,7 +1,7 @@
 - content_for :github_link do
   Version
   = link_to @version, @changelog_link, id: "version"
-  - if ENV["SERVER"] == "development"
+  - if development_server?
     \- Development Server
 
 - content_for :copyright do
@@ -9,21 +9,18 @@
   -# in development mode. Show the normal copyright otherwise.
   - if Rails.env.development?
     Launch:
-    = link_to "Development",
-              "http://pburgstuco-dev.herokuapp.com#{request.fullpath}"
+    = link_to "Development", "//#{@development_server}#{request.fullpath}"
     |
-    = link_to "Production",
-              "http://pburgstuco.herokuapp.com#{request.fullpath}"
-  - elsif ENV["SERVER"] == "development"
-    = link_to "Launch Production",
-              "http://pburgstuco.herokuapp.com#{request.fullpath}"
+    = link_to "Production", "//#{@production_server}#{request.fullpath}"
+  - elsif development_server?
+    = link_to "Launch Production", "//#{@production_server}#{request.fullpath}"
   - else
     Copyright ©2012 Vinny Diehl
 
 - content_for :contact_link do
   = link_to "Contact Us", contact_path
 
-.footer
+#footer
 
   -# On most screens the footer text will distribute evenly across the bottom.
   -# On phones, it will appear stacked at the bottom.
