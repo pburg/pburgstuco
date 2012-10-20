@@ -116,3 +116,13 @@ One of the more subtle updates.
 
  * Internal refactoring
  * Better "x" button for anti-IE PSA
+
+## 0.10
+
+### Additions
+
+ * Traffic statistics on GoSquared
+
+### Improvements
+
+ * Internal improvements
