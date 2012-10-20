@@ -8,6 +8,7 @@ gem "rails", "3.2.8"
 gem "thin", "~> 1.5"
 # HAML templating engine
 gem "haml-rails", "~> 0.3"
+gem "coffee-filter", "~> 0.1"
 
 ### Assets
 
