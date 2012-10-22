@@ -1,8 +1,7 @@
 - content_for :github_link do
   Version
   = link_to @version, @changelog_link, :class => "version"
-  - if development_server?
-    \- Development Server
+  = "- Development Server" if development_server?
 
 - content_for :copyright do
   -# Show links to launch the current page on one of the servers when running

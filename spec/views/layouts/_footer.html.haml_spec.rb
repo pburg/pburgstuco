@@ -21,6 +21,13 @@ describe "Footer" do
       response = http.request(Net::HTTP::Get.new uri.request_uri)
       response.kind_of?(Net::HTTPSuccess).should be_true
     end
+
+    it "has a special label on the public development server" do
+      set_development_server
+      visit root_path
+
+      should have_css "#footer .left", text: " - Development Server"
+    end
   end
 
   describe "center content" do
