@@ -15,4 +15,4 @@
         = link_to File.basename(file, ".*").titlecase,
                   "/downloads/#{File.basename file}"
       %td= File.extname(file)[1..-1].upcase
-      %td= sane_file_size(File.size file)
+      %td= number_to_human_size(File.size file)
