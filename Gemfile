@@ -10,6 +10,10 @@ gem "thin", "~> 1.5"
 gem "haml-rails", "~> 0.3"
 gem "coffee-filter", "~> 0.1"
 
+### Utilities
+
+gem "lightbox-rails", "~> 0.0.2"
+
 ### Assets
 
 group :assets do
