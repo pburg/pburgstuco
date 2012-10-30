@@ -12,9 +12,5 @@
 
       .nav-collapse.collapse
         %ul.nav.pull-right
-          = nav_link "Home", root_path
-          = nav_link "Members", members_path
-          = nav_link "Events", events_path
-          = nav_link "Photos", photos_path
-          = nav_link "Downloads", downloads_path
-          = nav_link "Constitution", constitution_path
+          - @nav_links.each do |text, path|
+            = nav_link text, path
