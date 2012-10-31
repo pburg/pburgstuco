@@ -126,3 +126,22 @@ One of the more subtle updates.
 ### Improvements
 
  * Internal improvements
+
+## 0.11
+
+I sat on this one for a while, because I wasn't sure if enough was accumulated
+to be worth putting out, but I figured that the validation fixes were
+important enough to warrant release.
+
+### Additions
+
+ * Specified UTF-8 charset explicitly (for saving pages to disk)
+
+### Fixes
+
+ * Fixed W3C HTML5 validation
+
+### Improvementes
+
+ * Minor performance boosts
+ * Internal clean-up

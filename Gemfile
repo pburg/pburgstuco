@@ -8,6 +8,11 @@ gem "rails", "3.2.8"
 gem "thin", "~> 1.5"
 # HAML templating engine
 gem "haml-rails", "~> 0.3"
+gem "coffee-filter", "~> 0.1"
+
+### Utilities
+
+gem "lightbox-rails", "~> 0.0.2"
 
 ### Assets
 
@@ -27,6 +32,6 @@ end
 
 group :development, :test do
   gem "rspec-rails", "~> 2.11"
-  gem "capybara", "2.0.0beta2"
+  gem "capybara", "2.0.0.beta4"
   gem "fuubar", "~> 1.1"
 end

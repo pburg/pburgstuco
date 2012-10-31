@@ -1,3 +1,5 @@
+@import "compass/css3"
+
 .github-fork-ribbon
   position: absolute
 
@@ -11,17 +13,12 @@
 
   // Set a gradient: transparent black at the top to almost-transparent black
   // at the bottom
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.00)), to(rgba(0, 0, 0, 0.15)))
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15))
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15))
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15))
-  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15))
-  background-image: linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15))
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#000000')
+  +background-image(linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15)))
+
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr='#000000', EndColorStr='#000000')
 
   // Add a drop shadow
-  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5)
-  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5)
+  +box-shadow(0px 2px 3px 0px rgba(0, 0, 0, 0.5))
 
   a
     // Set the font
@@ -67,10 +64,7 @@
       left: -43px
 
       // Rotate the banner -45 degrees
-      -webkit-transform: rotate(-45deg)
-      -moz-transform: rotate(-45deg)
-      -o-transform: rotate(-45deg)
-      transform: rotate(-45deg)
+      +transform(rotate(-45deg))
 
   &.right
     right: 0
@@ -80,10 +74,7 @@
       right: -43px
 
       // Rotate the banner 45 degrees
-      -webkit-transform: rotate(45deg)
-      -moz-transform: rotate(45deg)
-      -o-transform: rotate(45deg)
-      transform: rotate(45deg)
+      +transform(rotate(45deg))
 
   // Hide on screen sizes < 979 pixels (tablet/phone)
   @media (max-width: 979px)
