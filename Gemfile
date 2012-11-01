@@ -12,7 +12,7 @@ gem "coffee-filter", "~> 0.1"
 
 ### Utilities
 
-gem "lightbox-rails", "~> 0.0.2"
+gem "lightbox-rails", "~> 0.0.3"
 
 ### Assets
 
