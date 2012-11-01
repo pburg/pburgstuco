@@ -145,3 +145,11 @@ important enough to warrant release.
 
  * Minor performance boosts
  * Internal clean-up
+
+## 0.11.1
+
+This hotfix fixes the Photos page.
+
+### Fixes
+
+ * Fixed broken lightbox (breaks HTML5 compliance of the Photos page, however)

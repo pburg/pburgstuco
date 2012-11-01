@@ -85,7 +85,7 @@ GEM
     json (1.7.5)
     libwebsocket (0.1.5)
       addressable
-    lightbox-rails (0.0.2)
+    lightbox-rails (0.0.3)
       rails (~> 3.2.8)
     mail (2.4.4)
       i18n (>= 0.4.0)
@@ -178,7 +178,7 @@ DEPENDENCIES
   fuubar (~> 1.1)
   haml-rails (~> 0.3)
   jquery-rails (~> 2.1)
-  lightbox-rails (~> 0.0.2)
+  lightbox-rails (~> 0.0.3)
   rails (= 3.2.8)
   rspec-rails (~> 2.11)
   sass-rails (~> 3.2)
