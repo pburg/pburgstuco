@@ -13,6 +13,8 @@ gem "coffee-filter", "~> 0.1"
 ### Utilities
 
 gem "lightbox-rails", "~> 0.0.3"
+gem "turbolinks", "~> 0.5"
+gem "jquery-turbolinks", "~> 0.2"
 
 ### Assets
 
