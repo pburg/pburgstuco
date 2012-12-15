@@ -1,6 +1,6 @@
 source :rubygems
 
-gem "rails", "3.2.8"
+gem "rails", "3.2.9"
 
 ### Configuration
 
@@ -13,6 +13,8 @@ gem "coffee-filter", "~> 0.1"
 ### Utilities
 
 gem "lightbox-rails", "~> 0.0.3"
+gem "turbolinks", "~> 0.5"
+gem "jquery-turbolinks", "~> 0.2"
 
 ### Assets
 
@@ -25,13 +27,13 @@ group :assets do
   # CSS
   gem "sass-rails",   "~> 3.2"
   gem "compass-rails", "~> 1.0"
-  gem "bootstrap-sass", "~> 2.1"
+  gem "bootstrap-sass", "~> 2.2"
 end
 
 ### Environment Specific
 
 group :development, :test do
-  gem "rspec-rails", "~> 2.11"
-  gem "capybara", "2.0.0.beta4"
+  gem "rspec-rails", "~> 2.12"
+  gem "capybara", "~> 2.0"
   gem "fuubar", "~> 1.1"
 end

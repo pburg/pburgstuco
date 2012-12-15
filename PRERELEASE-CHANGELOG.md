@@ -153,3 +153,13 @@ This hotfix fixes the Photos page.
 ### Fixes
 
  * Fixed broken lightbox (breaks HTML5 compliance of the Photos page, however)
+
+## 0.12
+
+### Improvements
+
+ * Made pages load a lot faster
+
+### Changes
+
+ * Updated Events page
